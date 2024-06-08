@@ -1,4 +1,4 @@
-import 'services/setup_locator.dart';
+import 'services/dependency_locator.dart';
 
 import 'states/theme_state.dart';
 
