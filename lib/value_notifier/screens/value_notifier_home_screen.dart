@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import '../widgets/value_notifier_dark_mode_switch.dart';
 
 class ValueNotifierHomeScreen extends StatelessWidget {
-  final bool isDarkMode;
-  final Function toggleTheme;
   const ValueNotifierHomeScreen({
     super.key,
-    required this.isDarkMode,
-    required this.toggleTheme,
   });
 
   @override
@@ -16,7 +12,7 @@ class ValueNotifierHomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
         actions: [
-          ValueNotifierDarkModeSwitch(isDarkMode: isDarkMode, toggleTheme: toggleTheme),
+          ValueNotifierDarkModeSwitch(),
         ],
       ),
       body: const Center(
