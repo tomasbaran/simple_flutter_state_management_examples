@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  final bool isDarkMode;
+  final Function toggleTheme;
+  const HomeScreen({
+    super.key,
+    required this.isDarkMode,
+    required this.toggleTheme,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +21,15 @@ class HomeScreen extends StatelessWidget {
           //     Navigator.pushNamed(context, '/settings');
           //   },
           // ),
-          Switch.adaptive(value: true, onChanged: null),
+          Row(
+            children: [
+              Text(isDarkMode ? 'dark' : 'light'),
+              Switch.adaptive(
+                value: isDarkMode,
+                onChanged: (bool newValue) => toggleTheme(newValue),
+              ),
+            ],
+          ),
         ],
       ),
       body: const Center(
