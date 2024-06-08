@@ -16,13 +16,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
         actions: [
-          // IconButton(
-          //   icon: const Icon(Icons.settings),
-          //   onPressed: () {
-          //     Navigator.pushNamed(context, '/settings');
-          //   },
-          // ),
-          DarkModeSwitch(isDarkMode: isDarkMode, toggleTheme: toggleTheme)
+          DarkModeSwitch(isDarkMode: isDarkMode, toggleTheme: toggleTheme),
         ],
       ),
       body: const Center(
