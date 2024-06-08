@@ -1,1 +1,1 @@
-# Toggle Dark Mode using setState
+# Simple Toggle Dark Mode using setState
