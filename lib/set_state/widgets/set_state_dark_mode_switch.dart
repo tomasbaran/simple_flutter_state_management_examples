@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DarkModeSwitch extends StatelessWidget {
-  const DarkModeSwitch({
+class SetStateDarkModeSwitch extends StatelessWidget {
+  const SetStateDarkModeSwitch({
     super.key,
     required this.isDarkMode,
     required this.toggleTheme,
