@@ -9,15 +9,16 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              Navigator.pushNamed(context, '/settings');
-            },
-          ),
+          // IconButton(
+          //   icon: const Icon(Icons.settings),
+          //   onPressed: () {
+          //     Navigator.pushNamed(context, '/settings');
+          //   },
+          // ),
+          Switch.adaptive(value: true, onChanged: null),
         ],
       ),
-      body:const Center(
+      body: const Center(
         child: Text('Hello World!'),
       ),
     );
