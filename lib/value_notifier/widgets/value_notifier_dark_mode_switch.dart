@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:simple_flutter_state_management_examples/value_notifier/state/theme_state.dart';
+import '../services/setup_locator.dart';
+import '../state/theme_state.dart';
 
 class ValueNotifierDarkModeSwitch extends StatelessWidget {
   ValueNotifierDarkModeSwitch({
     super.key,
   });
 
-  final themeState = ThemeState();
+  final themeState = locate<ThemeState>();
 
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<ThemeMode>(
-        valueListenable: ThemeState().themeMode,
+        valueListenable: themeState.themeMode,
         builder: (context, themeModeValue, child) {
           return Row(
             children: [

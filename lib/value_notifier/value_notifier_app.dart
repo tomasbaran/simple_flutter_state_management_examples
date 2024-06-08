@@ -1,31 +1,25 @@
+import 'services/setup_locator.dart';
+
 import 'state/theme_state.dart';
 
 import 'screens/value_notifier_home_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 
-class ValueNotifierApp extends StatefulWidget {
-  const ValueNotifierApp({super.key});
+class ValueNotifierApp extends StatelessWidget {
+  ValueNotifierApp({super.key});
 
-  @override
-  State<ValueNotifierApp> createState() => _ValueNotifierAppState();
-}
-
-class _ValueNotifierAppState extends State<ValueNotifierApp> {
-  final themeState = ThemeState();
-  @override
-  void initState() {
-    super.initState();
-    // final isDarkModeByDefault = SchedulerBinding.instance.platformDispatcher.platformBrightness == Brightness.dark;
-    // themeState.setThemeMode(isDarkModeByDefault);
-  }
+  final themeState = locate<ThemeState>();
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      darkTheme: ThemeData.dark(),
-      themeMode: themeState.themeMode.value,
-      home: const ValueNotifierHomeScreen(),
+    themeState.setThemeMode(MediaQuery.platformBrightnessOf(context) == Brightness.dark ? ThemeMode.dark : ThemeMode.light);
+    return ValueListenableBuilder(
+      valueListenable: themeState.themeMode,
+      builder: (context, themeModeValue, child) => MaterialApp(
+        darkTheme: ThemeData.dark(),
+        themeMode: themeModeValue,
+        home: const ValueNotifierHomeScreen(),
+      ),
     );
   }
 }
