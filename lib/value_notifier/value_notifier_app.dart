@@ -1,6 +1,6 @@
 import 'services/setup_locator.dart';
 
-import 'state/theme_state.dart';
+import 'states/theme_state.dart';
 
 import 'screens/value_notifier_home_screen.dart';
 import 'package:flutter/material.dart';
