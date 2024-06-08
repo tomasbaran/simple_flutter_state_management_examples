@@ -1,5 +1,5 @@
-name: change_theme_template
-description: A new Flutter project.
+name: simple_flutter_state_management_examples
+description: Showcase of different state managements used in Flutter.
 publish_to: 'none'
 version: 0.1.0
 
