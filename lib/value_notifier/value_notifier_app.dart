@@ -1,4 +1,4 @@
-import 'package:change_theme_template/set_state/screens/set_state_home_screen.dart';
+import 'screens/value_notifier_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 
@@ -29,7 +29,7 @@ class _ValueNotifierAppState extends State<ValueNotifierApp> {
     return MaterialApp(
       darkTheme: ThemeData.dark(),
       themeMode: isDarkMode ? ThemeMode.dark : ThemeMode.light,
-      home: SetStateHomeScreen(
+      home: ValueNotifierHomeScreen(
         isDarkMode: isDarkMode,
         toggleTheme: toggleTheme,
       ),
