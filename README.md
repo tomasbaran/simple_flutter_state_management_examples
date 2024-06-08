@@ -1,3 +1,3 @@
 # Simple Toggle Dark Mode using setState
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-06-08 at 07 53 47](https://github.com/tomasbaran/toggle_dark_mode/assets/25743901/daf05d79-2e89-44d4-99b4-24ca56f02fda)
-![Simulator Screenshot - iPhone 15 Pro Max - 2024-06-08 at 07 53 41](https://github.com/tomasbaran/toggle_dark_mode/assets/25743901/c04c9f2f-cc54-4fee-87d6-3051a585a06e)
+
+![Simulator Screenshot - iPhone 15 Pro Max - 2024-06-08 at 07 53 47](https://github.com/tomasbaran/toggle_dark_mode/assets/25743901/fa3ed649-1108-42b4-93db-ce35c3a1af5b) ![Simulator Screenshot - iPhone 15 Pro Max - 2024-06-08 at 07 57 31](https://github.com/tomasbaran/toggle_dark_mode/assets/25743901/cee100c4-0065-4095-b75c-da7d308e699c) 
