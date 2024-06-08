@@ -1,3 +1,4 @@
+import 'package:change_theme_template/widgets/dark_mode_switch.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -21,15 +22,7 @@ class HomeScreen extends StatelessWidget {
           //     Navigator.pushNamed(context, '/settings');
           //   },
           // ),
-          Row(
-            children: [
-              Text(isDarkMode ? 'dark' : 'light'),
-              Switch.adaptive(
-                value: isDarkMode,
-                onChanged: (bool newValue) => toggleTheme(newValue),
-              ),
-            ],
-          ),
+          DarkModeSwitch(isDarkMode: isDarkMode, toggleTheme: toggleTheme)
         ],
       ),
       body: const Center(
