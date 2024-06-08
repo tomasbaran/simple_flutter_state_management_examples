@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import '../widgets/set_state_dark_mode_switch.dart';
 
 class SetStateHomeScreen extends StatelessWidget {
-  final bool isDarkMode;
+  final Brightness themeBrightness;
   final Function toggleTheme;
   const SetStateHomeScreen({
     super.key,
-    required this.isDarkMode,
+    required this.themeBrightness,
     required this.toggleTheme,
   });
 
@@ -16,7 +16,7 @@ class SetStateHomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
         actions: [
-          SetStateDarkModeSwitch(isDarkMode: isDarkMode, toggleTheme: toggleTheme),
+          SetStateDarkModeSwitch(themeBrightness: themeBrightness, toggleTheme: toggleTheme),
         ],
       ),
       body: const Center(

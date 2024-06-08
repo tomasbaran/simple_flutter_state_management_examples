@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 class SetStateDarkModeSwitch extends StatelessWidget {
   const SetStateDarkModeSwitch({
     super.key,
-    required this.isDarkMode,
+    required this.themeBrightness,
     required this.toggleTheme,
   });
 
-  final bool isDarkMode;
+  final Brightness themeBrightness;
   final Function toggleTheme;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(isDarkMode ? 'dark' : 'light'),
+        Text(themeBrightness.name),
         Switch.adaptive(
-          value: isDarkMode,
+          value: themeBrightness == Brightness.dark,
           onChanged: (bool newValue) => toggleTheme(newValue),
         ),
       ],

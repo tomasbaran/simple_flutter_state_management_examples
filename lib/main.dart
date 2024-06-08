@@ -5,7 +5,10 @@ import 'value_notifier/value_notifier_app.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  setupLocator();
+  // State Management: Set State
+  runApp(const SetStateApp());
 
-  runApp(ValueNotifierApp());
+  // State Management: Value Notifier
+  // setupLocator();
+  // runApp(ValueNotifierApp());
 }
