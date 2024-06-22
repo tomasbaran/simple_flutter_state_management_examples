@@ -6,13 +6,18 @@ import 'package:simple_flutter_state_management_examples/value_notifier/models/p
 
 class PersonState {
   final selectedPerson = ValueNotifier<Person?>(null);
+  List<Person> loadedPersons = List.empty();
 
-  setPerson(Person person) {
-    selectedPerson.value = person;
+  loadPersons() {
+    loadedPersons = persons;
   }
 
   setRandomPerson() {
-    final randomIndex = Random().nextInt(persons.length);
-    selectedPerson.value = persons[randomIndex];
+    if (loadedPersons.isEmpty) {
+      loadPersons();
+    } else {
+      final randomIndex = Random().nextInt(loadedPersons.length);
+      selectedPerson.value = loadedPersons[randomIndex];
+    }
   }
 }
