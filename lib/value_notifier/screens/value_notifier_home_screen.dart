@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simple_flutter_state_management_examples/value_notifier/models/person.dart';
 import 'package:simple_flutter_state_management_examples/value_notifier/services/dependency_locator.dart';
 import 'package:simple_flutter_state_management_examples/value_notifier/states/person_state.dart';
 
@@ -13,6 +14,10 @@ class ValueNotifierHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final personState = locate<PersonState>();
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => personState.setPerson(Person('John', 1)),
+        child: const Icon(Icons.switch_access_shortcut),
+      ),
       appBar: AppBar(
         title: const Text('Home Screen'),
         actions: [
@@ -23,7 +28,7 @@ class ValueNotifierHomeScreen extends StatelessWidget {
         child: ValueListenableBuilder(
             valueListenable: personState.selectedPerson,
             builder: (context, selectedPerson, child) {
-              return Text('Hello ${selectedPerson ?? 'world'}!');
+              return Text('Hello ${selectedPerson?.name ?? 'world'}!');
             }),
       ),
     );
