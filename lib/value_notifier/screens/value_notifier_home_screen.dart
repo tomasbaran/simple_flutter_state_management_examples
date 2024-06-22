@@ -4,14 +4,20 @@ import 'package:simple_flutter_state_management_examples/value_notifier/states/p
 
 import '../widgets/value_notifier_dark_mode_switch.dart';
 
-class ValueNotifierHomeScreen extends StatelessWidget {
+class ValueNotifierHomeScreen extends StatefulWidget {
   const ValueNotifierHomeScreen({
     super.key,
   });
 
   @override
+  State<ValueNotifierHomeScreen> createState() => _ValueNotifierHomeScreenState();
+}
+
+class _ValueNotifierHomeScreenState extends State<ValueNotifierHomeScreen> {
+  final personState = locate<PersonState>();
+
+  @override
   Widget build(BuildContext context) {
-    final personState = locate<PersonState>();
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () => personState.setRandomPerson(),
