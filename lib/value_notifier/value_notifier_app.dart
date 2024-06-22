@@ -18,7 +18,7 @@ class ValueNotifierApp extends StatelessWidget {
       builder: (context, themeModeValue, child) => MaterialApp(
         darkTheme: ThemeData.dark(),
         themeMode: themeModeValue,
-        home: const ValueNotifierHomeScreen(),
+        home: ValueNotifierHomeScreen(),
       ),
     );
   }
