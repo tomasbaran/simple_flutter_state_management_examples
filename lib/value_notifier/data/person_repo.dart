@@ -6,3 +6,7 @@ final persons = [
   Person('Carmen', 3),
   Person('Pamela', 4),
 ];
+
+class PersonRepo {
+  get all => persons;
+}
