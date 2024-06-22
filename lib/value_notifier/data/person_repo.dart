@@ -1,12 +1,21 @@
-import 'package:simple_flutter_state_management_examples/value_notifier/models/person.dart';
-
-final persons = [
-  Person('Jessica', 1),
-  Person('Sarai', 2),
-  Person('Carmen', 3),
-  Person('Pamela', 4),
-];
-
 class PersonRepo {
-  get all => persons;
+  Future<String> fetchPersons() async {
+    // Simulate a network request
+    await Future.delayed(const Duration(seconds: 2));
+
+    return """
+{
+    "persons": [
+      {
+        "name": "Miau",
+        "age": 30
+      },
+      {
+        "name": "Grrr",
+        "age": 25
+      }
+    ]
+  }
+  """;
+  }
 }
