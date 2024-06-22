@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:simple_flutter_state_management_examples/value_notifier/models/person.dart';
 import 'package:simple_flutter_state_management_examples/value_notifier/services/dependency_locator.dart';
 import 'package:simple_flutter_state_management_examples/value_notifier/states/person_state.dart';
 
@@ -15,7 +14,7 @@ class ValueNotifierHomeScreen extends StatelessWidget {
     final personState = locate<PersonState>();
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        onPressed: () => personState.setPerson(Person('John', 1)),
+        onPressed: () => personState.setRandomPerson(),
         child: const Icon(Icons.switch_access_shortcut),
       ),
       appBar: AppBar(
