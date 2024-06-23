@@ -1,8 +1,8 @@
-import 'services/dependency_locator.dart';
+import 'core/services/dependency_locator.dart';
 
-import 'states/theme_state.dart';
+import 'features/person/presentation/states/theme_state.dart';
 
-import 'screens/value_notifier_home_screen.dart';
+import 'features/person/presentation/screens/value_notifier_home_screen.dart';
 import 'package:flutter/material.dart';
 
 class ValueNotifierApp extends StatelessWidget {

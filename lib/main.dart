@@ -1,4 +1,4 @@
-import 'value_notifier/services/dependency_locator.dart';
+import 'value_notifier/core/services/dependency_locator.dart';
 
 import 'set_state/set_state_app.dart';
 import 'value_notifier/value_notifier_app.dart';

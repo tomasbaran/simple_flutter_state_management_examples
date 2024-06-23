@@ -1,7 +1,7 @@
 class PersonRepo {
   Future<String> fetchPersons() async {
     // Simulate a network request
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 1));
 
     return """
 {

@@ -1,9 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:simple_flutter_state_management_examples/value_notifier/data/person_service.dart';
-import 'package:simple_flutter_state_management_examples/value_notifier/models/person.dart';
-import 'package:simple_flutter_state_management_examples/value_notifier/services/dependency_locator.dart';
+import 'package:simple_flutter_state_management_examples/value_notifier/features/person/data/person_service.dart';
+import 'package:simple_flutter_state_management_examples/value_notifier/features/person/domain/models/person.dart';
+import 'package:simple_flutter_state_management_examples/value_notifier/core/services/dependency_locator.dart';
 
 class PersonState {
   final personService = locate<PersonService>();

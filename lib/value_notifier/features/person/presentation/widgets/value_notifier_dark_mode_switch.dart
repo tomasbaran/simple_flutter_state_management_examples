@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../services/dependency_locator.dart';
+import '../../../../core/services/dependency_locator.dart';
 import '../states/theme_state.dart';
 
 class ValueNotifierDarkModeSwitch extends StatelessWidget {

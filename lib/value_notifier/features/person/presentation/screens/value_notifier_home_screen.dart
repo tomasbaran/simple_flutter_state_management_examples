@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_flutter_state_management_examples/value_notifier/services/dependency_locator.dart';
-import 'package:simple_flutter_state_management_examples/value_notifier/states/person_state.dart';
+import 'package:simple_flutter_state_management_examples/value_notifier/core/services/dependency_locator.dart';
+import 'package:simple_flutter_state_management_examples/value_notifier/features/person/presentation/states/person_state.dart';
 
 import '../widgets/value_notifier_dark_mode_switch.dart';
 
