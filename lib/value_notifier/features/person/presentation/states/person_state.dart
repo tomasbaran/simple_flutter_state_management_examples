@@ -1,18 +1,17 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:simple_flutter_state_management_examples/value_notifier/features/person/data/person_service.dart';
 import 'package:simple_flutter_state_management_examples/value_notifier/features/person/domain/models/person.dart';
-import 'package:simple_flutter_state_management_examples/value_notifier/core/services/dependency_locator.dart';
 
 class PersonState {
-  final personService = locate<PersonService>();
+  PersonState(this.personService);
+  final PersonService personService;
   final selectedPerson = ValueNotifier<Person?>(null);
 
-  List<Person> loadedPersons = List.empty();
+  List<Person> loadedPersons = [];
 
   loadPersons() async {
-    loadedPersons = await personService.getPersons();
+    loadedPersons = await personService.parsePersons();
   }
 
   setRandomPerson() {

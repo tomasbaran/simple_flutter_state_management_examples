@@ -9,10 +9,10 @@ final locate = GetIt.instance;
 void setupLocator() {
   // Presentation: states
   locate.registerLazySingleton<ThemeState>(() => ThemeState());
-  locate.registerLazySingleton<PersonState>(() => PersonState());
+  locate.registerLazySingleton<PersonState>(() => PersonState(locate()));
 
   // Data: service
-  locate.registerLazySingleton<PersonService>(() => PersonService());
+  locate.registerLazySingleton<PersonService>(() => PersonService(locate()));
   // Data: repository
   locate.registerLazySingleton<PersonRepo>(() => PersonRepo());
 }
