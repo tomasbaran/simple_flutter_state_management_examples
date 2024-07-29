@@ -11,17 +11,17 @@ class SetStateApp extends StatefulWidget {
 }
 
 class _SetStateAppState extends State<SetStateApp> {
-  late Brightness themeBrightness;
+  late Brightness appBrightness;
 
   @override
   void initState() {
     super.initState();
-    themeBrightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
+    appBrightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
   }
 
   void toggleTheme(bool valueFromSwitch) {
     setState(() {
-      themeBrightness = valueFromSwitch ? Brightness.dark : Brightness.light;
+      appBrightness = valueFromSwitch ? Brightness.dark : Brightness.light;
     });
   }
 
@@ -29,9 +29,9 @@ class _SetStateAppState extends State<SetStateApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       darkTheme: ThemeData.dark(),
-      themeMode: themeBrightness == Brightness.dark ? ThemeMode.dark : ThemeMode.light,
+      themeMode: appBrightness == Brightness.dark ? ThemeMode.dark : ThemeMode.light,
       home: SetStateHomeScreen(
-        themeBrightness: themeBrightness,
+        appBrightness: appBrightness,
         toggleTheme: toggleTheme,
       ),
     );
