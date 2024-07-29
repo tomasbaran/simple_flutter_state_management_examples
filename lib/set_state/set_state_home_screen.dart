@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../widgets/set_state_dark_mode_switch.dart';
+import 'set_state_dark_mode_switch.dart';
 
 class SetStateHomeScreen extends StatelessWidget {
   final Brightness themeBrightness;
