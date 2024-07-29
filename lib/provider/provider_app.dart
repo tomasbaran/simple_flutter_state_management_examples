@@ -10,13 +10,15 @@ class ProviderApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context) => ProviderAppVM(),
-      child: Consumer<ProviderAppVM>(builder: (context, appVM, child) {
-        return MaterialApp(
-          themeMode: appVM.themeMode,
-          darkTheme: ThemeData.dark(),
-          home: const ProviderHomeScreen(),
-        );
-      }),
+      child: Consumer<ProviderAppVM>(
+        builder: (context, appVM, child) {
+          return MaterialApp(
+            themeMode: appVM.appBrightness,
+            darkTheme: ThemeData.dark(),
+            home: const ProviderHomeScreen(),
+          );
+        },
+      ),
     );
   }
 }

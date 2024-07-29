@@ -13,7 +13,7 @@ class ProviderHomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Home Screen'),
         actions: const [
-          ProviderDarkModeSwitch(),
+          DarkModeSwitch(),
         ],
       ),
       body: const Center(
@@ -23,20 +23,20 @@ class ProviderHomeScreen extends StatelessWidget {
   }
 }
 
-class ProviderDarkModeSwitch extends StatelessWidget {
-  const ProviderDarkModeSwitch({
+class DarkModeSwitch extends StatelessWidget {
+  const DarkModeSwitch({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return Consumer<ProviderAppVM>(
-      builder: (context, vmValue, child) => Row(
+      builder: (context, appVM, child) => Row(
         children: [
-          Text(vmValue.themeMode.name),
+          Text(appVM.appBrightness.name),
           Switch.adaptive(
-            value: vmValue.themeMode == ThemeMode.dark,
-            onChanged: (bool newValue) => vmValue.toggleTheme(newValue),
+            value: appVM.appBrightness == ThemeMode.dark,
+            onChanged: (bool darkMode) => appVM.toggleAppBrightness(darkMode),
           ),
         ],
       ),

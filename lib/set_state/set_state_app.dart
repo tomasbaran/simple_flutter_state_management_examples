@@ -19,9 +19,9 @@ class _SetStateAppState extends State<SetStateApp> {
     appBrightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
   }
 
-  void toggleTheme(bool valueFromSwitch) {
+  void toggleAppBrightness(bool isDarkMode) {
     setState(() {
-      appBrightness = valueFromSwitch ? Brightness.dark : Brightness.light;
+      appBrightness = isDarkMode ? Brightness.dark : Brightness.light;
     });
   }
 
@@ -32,7 +32,7 @@ class _SetStateAppState extends State<SetStateApp> {
       themeMode: appBrightness == Brightness.dark ? ThemeMode.dark : ThemeMode.light,
       home: SetStateHomeScreen(
         appBrightness: appBrightness,
-        toggleTheme: toggleTheme,
+        toggleTheme: toggleAppBrightness,
       ),
     );
   }
